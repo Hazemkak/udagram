@@ -52,16 +52,27 @@ jobs:
     steps:
       - node/install:
           node-version: "16.15"
-      - eb/setup
       - aws-cli/setup
       - checkout
       - run:
-          name: Deploy App
+          name: Deploy Frontend App
           command: |
-            npm run deploy
+            npm run frontend:deploy
+  eb-deploy:
+    docker:
+      - image: "cimg/base:stable"
+    steps:
+      - checkout
+      - eb/setup
+      - run:
+          command: |
+            npm run api:deploy
+            eb status
+          name: Deploying Backend
 
 workflows:
   udagram:
     jobs:
       - build
       - deploy
+      - eb-deploy
