@@ -62,8 +62,11 @@ jobs:
     docker:
       - image: "cimg/base:stable"
     steps:
-      - checkout
+      - node/install:
+        node-version: "16.15"
       - eb/setup
+      - aws-cli/setup
+      - checkout
       - run:
           command: |
             npm run api:deploy
