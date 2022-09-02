@@ -1,22 +1,21 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 import {
   HttpClient,
   HttpHeaders,
   HttpRequest,
   HttpEvent,
-} from "@angular/common/http";
-import { environment } from "../../environments/environment.prod";
-import { map } from "rxjs/operators";
+} from '@angular/common/http';
+import { environment } from '../../environments/environment.prod';
+import { map } from 'rxjs/operators';
 
 const API_HOST = environment.apiHost;
-console.log("The APII is ", API_HOST);
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class ApiService {
   httpOptions = {
-    headers: new HttpHeaders({ "Content-Type": "application/json" }),
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
 
   token: string;
@@ -34,7 +33,7 @@ export class ApiService {
 
   setAuthToken(token) {
     this.httpOptions.headers = this.httpOptions.headers.append(
-      "Authorization",
+      'Authorization',
       `jwt ${token}`
     );
     this.token = token;
@@ -67,8 +66,8 @@ export class ApiService {
     const signed_url = (await this.get(`${endpoint}/signed-url/${file.name}`))
       .url;
 
-    const headers = new HttpHeaders({ "Content-Type": file.type });
-    const req = new HttpRequest("PUT", signed_url, file, {
+    const headers = new HttpHeaders({ 'Content-Type': file.type });
+    const req = new HttpRequest('PUT', signed_url, file, {
       headers: headers,
       reportProgress: true, // track progress
     });
