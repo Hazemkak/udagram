@@ -9,6 +9,7 @@ import { environment } from "../../environments/environment.prod";
 import { map } from "rxjs/operators";
 
 const API_HOST = environment.apiHost;
+console.log("The APII is ", API_HOST);
 
 @Injectable({
   providedIn: "root",
