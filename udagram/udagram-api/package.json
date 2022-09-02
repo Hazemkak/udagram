@@ -24,6 +24,7 @@
     "@types/jsonwebtoken": "^8.3.2",
     "aws-sdk": "^2.429.0",
     "bcryptjs": "2.4.3",
+    "bestzip": "^2.2.1",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
