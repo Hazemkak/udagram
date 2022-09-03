@@ -1,4 +1,4 @@
-[![Hazemkak](https://circleci.com/gh/Hazemkak/udagram.svg?style=svg)](https://app.circleci.com/pipelines/github/Hazemkak/udagram)
+[![Hazemkak](https://circleci.com/gh/Hazemkak/udagram/tree/master.svg?style=svg)](https://app.circleci.com/pipelines/github/Hazemkak/udagram)
 
 # Frontend Url: [frontend](http://udagramhazem.s3-website-us-east-1.amazonaws.com/home)
 
