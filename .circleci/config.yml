@@ -44,8 +44,8 @@ jobs:
           name: API Build
           command: |
             npm run api:build
-  # deploy step will run only after manual approval
-  deploy:
+  # deploy step to deploy the frontend on s3 bucket
+  fe-deploy:
     docker:
       - image: "cimg/base:stable"
       # more setup needed for aws, node, elastic beanstalk
@@ -58,7 +58,8 @@ jobs:
           name: Deploy Frontend App
           command: |
             npm run frontend:deploy
-  eb-deploy:
+  # deploy step to deploy the backend on elastic beanstalk env
+  be-deploy:
     docker:
       - image: "cimg/base:stable"
     steps:
