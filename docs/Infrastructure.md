@@ -1,5 +1,4 @@
 # Infrastructure Description
-
 ## RDS:
 
 I used rds postgres first to initialize my database then i copied the credentials of database
