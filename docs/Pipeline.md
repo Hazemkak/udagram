@@ -22,4 +22,5 @@
 - Installing node
 - Setup aws cli
 - Setup elastic beanstalk
+- set environments variables to eb-cli from circleci 
 - Deploying api backend `npm run api:deploy`
