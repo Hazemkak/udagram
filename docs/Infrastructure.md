@@ -6,9 +6,8 @@ to my environment variables in elastic beanstalk to make the api able to connect
 
 ## Elastic Beanstalk:
 
-I started first by building the application and zipping it then uploading the zipped version to
-elastic beanstalk through CI/CD in CricleCi as well as adding the needed environment variables
-using `eb setenv` command
+I started first by building the application and zipping it then adding the env variables to eb cli
+then uploading the zipped version to elastic beanstalk through CI/CD in CricleCi
 
 ## S3 bucket
 
